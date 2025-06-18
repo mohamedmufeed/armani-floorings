@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import bannerImage from "../assets/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall.jpg"
-import Navbar from '@/components/Home/Navbar'
+import Navbar from '@/components/etc/Navbar'
 import { DM_Sans } from 'next/font/google'
 import gsap from 'gsap'
 import Products from '@/components/Home/Products'
@@ -11,6 +11,7 @@ import WhyChoose from '@/components/Home/WhyChoose'
 import Testimonials from '@/components/Home/Testimonials'
 import SocialMediaSidebar from '@/components/etc/SocialMediaSidebar'
 import Contact from '@/components/Home/Contact'
+import Footer from '@/components/etc/Footer'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -112,6 +113,11 @@ const Page = () => {
 
       <section className='p-5 sm:p-10'>
         <Contact />
+      </section>
+
+
+      <section >
+        <Footer/>
       </section>
 
     </div>
