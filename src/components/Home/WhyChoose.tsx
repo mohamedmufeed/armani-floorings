@@ -1,3 +1,4 @@
+'use client'
 import { Montserrat } from "next/font/google"
 import { FaCalendarAlt } from "react-icons/fa";
 import { BsBoxSeam } from "react-icons/bs";
@@ -5,8 +6,6 @@ import { LuCalendarCheck2 } from "react-icons/lu";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";
 import { HiOutlineBuildingOffice } from "react-icons/hi2";
-
-
 
 
 
@@ -20,7 +19,7 @@ const whyChooseUsData = [
         id: 1,
         title: "45 years of excellence",
         description: "Perfection is not attainable, but if we chase perfection, we can catch excellence.",
-        icon: <LuCalendarCheck2 size={40}  />, // You can customize the icon style
+        icon: <LuCalendarCheck2 size={40}  />, 
     },
     {
         id: 2,

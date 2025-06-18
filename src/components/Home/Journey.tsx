@@ -1,3 +1,4 @@
+'use client'
 import { Montserrat } from "next/font/google"
 import Image from "next/image"
 import Armani1 from "../../assets/armani-3.webp"

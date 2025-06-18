@@ -10,6 +10,7 @@ import Journey from '@/components/Home/Journey'
 import WhyChoose from '@/components/Home/WhyChoose'
 import Testimonials from '@/components/Home/Testimonials'
 import SocialMediaSidebar from '@/components/etc/SocialMediaSidebar'
+import Contact from '@/components/Home/Contact'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -36,7 +37,7 @@ const Page = () => {
   return (
     <div>
       <div className='hidden sm:block md:block lg:block' >
-      <SocialMediaSidebar />
+        <SocialMediaSidebar />
       </div>
 
       <section className="relative w-full h-screen">
@@ -105,6 +106,12 @@ const Page = () => {
 
       <section className='p-5 sm:p-10'>
         <Testimonials />
+      </section>
+
+      {/* contact section */}
+
+      <section className='p-5 sm:p-10'>
+        <Contact />
       </section>
 
     </div>

@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import Granaite from "../../assets/grante.webp"
 import Tile from "../../assets/TileStone1.jpg"

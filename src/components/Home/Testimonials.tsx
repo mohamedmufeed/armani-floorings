@@ -1,3 +1,4 @@
+'use client'
 import { Montserrat } from 'next/font/google'
 import React, { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
