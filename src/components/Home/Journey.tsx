@@ -70,7 +70,7 @@ const Journey = () => {
 
     return (
         <div className={`relative overflow-hidden px-0 md:px-10 py-16 ${montserrat.className}`}>
-{/* banner */}
+            {/* banner */}
             <h1 className="absolute text-[25vw] sm:text-[25vw] md:text-[20vw] lg:text-[15vw] xl:text-[12vw] font-bold text-black/5 uppercase top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap">
                 Journey
             </h1>
@@ -97,27 +97,33 @@ const Journey = () => {
                         </div>
                     </div>
 
-    {/* right side */}
+                    {/* right side */}
                     <div ref={imagesRef} className="w-full lg:w-1/2 flex flex-col gap-6">
-                        <div className="w-full mt-6 lg:mt-20">
+                        <div className="relative w-full h-[250px]">
                             <Image
                                 src={Armani2}
                                 alt="Armani 2"
-                                className="w-full h-[200px] sm:h-[200px] md:h-[250px] object-cover rounded-md"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover rounded-md"
                             />
                         </div>
+
+
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <div className="w-full sm:w-1/2">
                                 <Image
                                     src={Armani1}
                                     alt="Armani 1"
-                                    className="w-full h-[180px] sm:h-[200px] object-cover rounded-md"
+                                    width={1200}
+                                    height={150}
+                                    className="object-cover rounded-md"
                                 />
                             </div>
 
-                            <div className="w-full sm:w-1/2 bg-gray-200 flex items-center justify-center text-white rounded-md min-h-[100px] h-[200px]">
-                                <FaArrowRightLong className="w-10 h-10 text-gray-500" />
+                            <div className="w-full sm:w-1/2 bg-gray-200 flex items-center justify-center text-white rounded-md min-h-[120px] h-[225px]">
+                                <FaArrowRightLong className="w-10 h-12 text-gray-500" />
                             </div>
                         </div>
                     </div>

@@ -8,6 +8,7 @@ import { MdEmail } from "react-icons/md"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ContactFormData, ContactFormErrors } from '@/types/contactTypes';
+import { sendMail } from '@/service/contactapi';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,8 +86,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', formData);
+      await sendMail(formData)
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
 

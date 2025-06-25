@@ -45,7 +45,7 @@ const Footer = () => {
               </h2>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/armanifloorings/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -54,7 +54,7 @@ const Footer = () => {
                   <Instagram size={18} />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1A1xDji2XZ/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -63,7 +63,7 @@ const Footer = () => {
                   <Facebook size={18} />
                 </a>
                 <a
-                  href="https://wa.me/91XXXXXXXXXX"
+                  href="https://wa.me/+917034136736"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
@@ -72,7 +72,7 @@ const Footer = () => {
                   <FaWhatsapp size={18} />
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://www.youtube.com/@armanifloorings"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"

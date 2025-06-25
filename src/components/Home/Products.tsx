@@ -131,17 +131,19 @@ const Products = () => {
                                     src={product.img}
                                     alt={product.name}
                                     fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 33vw"
                                     className="object-cover rounded-t-xl"
                                 />
                             </div>
 
-                            
+
+
                             <div className="bg-[#0A8DC1] text-white p-5 h-full">
                                 <h2 className="font-bold text-xl">{product.name}</h2>
                                 <p className="mt-4 text-sm">{product.description}</p>
                             </div>
 
-                      
+
                             <div className="absolute inset-0 bg-black/60 text-white p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col items-center justify-center text-center">
                                 <h3 className="text-xl font-semibold mb-4">{product.subheading}</h3>
                                 <p className="text-sm mb-4 max-w-xs">{product.detail}</p>
