@@ -3,6 +3,7 @@ import { Instagram, Facebook, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Logo from '../../assets/Armani Logo For Dev.png';
 import { FaWhatsapp } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -31,11 +32,12 @@ const Footer = () => {
                 Quick Links
               </h2>
               <nav className="grid grid-cols-2 gap-y-2 gap-x-4">
-                <a href="/" className="text-sm hover:text-[#0A8DC1] transition-colors">Home</a>
-                <a href="/gallery" className="text-sm hover:text-[#0A8DC1] transition-colors">Gallery</a>
-                <a href="/products" className="text-sm hover:text-[#0A8DC1] transition-colors">Products</a>
-                <a href="/blog" className="text-sm hover:text-[#0A8DC1] transition-colors">Blog</a>
+                <Link href="/" className="text-sm hover:text-[#0A8DC1] transition-colors">Home</Link>
+                <Link href="/gallery" className="text-sm hover:text-[#0A8DC1] transition-colors">Gallery</Link>
+                <Link href="/products" className="text-sm hover:text-[#0A8DC1] transition-colors">Products</Link>
+                <Link href="/blog" className="text-sm hover:text-[#0A8DC1] transition-colors">Blog</Link>
               </nav>
+
             </div>
 
             {/* Follow Us */}
