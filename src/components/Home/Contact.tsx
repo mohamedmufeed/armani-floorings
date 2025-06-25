@@ -103,62 +103,62 @@ const Contact = () => {
 
 
   useEffect(() => {
-  if (headingRef.current) {
-    gsap.from(headingRef.current, {
-      scrollTrigger: {
-        trigger: headingRef.current,
-        start: 'top 90%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      y: -40,
-      duration: 1.2,
-      ease: 'power3.out',
-    });
-  }
+    if (headingRef.current) {
+      gsap.from(headingRef.current, {
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: 'top 90%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        y: -40,
+        duration: 1.2,
+        ease: 'power3.out',
+      });
+    }
 
-  if (mapRef.current) {
-    gsap.from(mapRef.current, {
-      scrollTrigger: {
-        trigger: mapRef.current,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      y: 40,
-      duration: 1.4,
-      ease: 'power3.out',
-    });
-  }
+    if (mapRef.current) {
+      gsap.from(mapRef.current, {
+        scrollTrigger: {
+          trigger: mapRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1.4,
+        ease: 'power3.out',
+      });
+    }
 
-  if (infoRef.current) {
-    gsap.from(infoRef.current, {
-      scrollTrigger: {
-        trigger: infoRef.current,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      x: -50,
-      duration: 1.4,
-      ease: 'power3.out',
-    });
-  }
+    if (infoRef.current) {
+      gsap.from(infoRef.current, {
+        scrollTrigger: {
+          trigger: infoRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        x: -50,
+        duration: 1.4,
+        ease: 'power3.out',
+      });
+    }
 
-  if (formRef.current) {
-    gsap.from(formRef.current, {
-      scrollTrigger: {
-        trigger: formRef.current,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      x: 50,
-      duration: 1.4,
-      ease: 'power3.out',
-    });
-  }
-}, []);
+    if (formRef.current) {
+      gsap.from(formRef.current, {
+        scrollTrigger: {
+          trigger: formRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        x: 50,
+        duration: 1.4,
+        ease: 'power3.out',
+      });
+    }
+  }, []);
 
 
 
@@ -174,7 +174,7 @@ const Contact = () => {
       </div>
 
 
-      <div  ref={mapRef} className="mt-10 w-full max-w-7xl mx-auto aspect-[16/9]">
+      <div ref={mapRef} className="mt-10 w-full max-w-7xl mx-auto aspect-[16/9]">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4589.589964144738!2d76.0213209757051!3d11.004816989158181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b54262f6fcd3%3A0xc855079b6fd93422!2sArmani%20floorings!5e1!3m2!1sen!2sin!4v1750242133029!5m2!1sen!2sin"
           style={{ border: 0 }}
@@ -186,7 +186,7 @@ const Contact = () => {
         />
       </div>
 
-   
+
       <div className="relative overflow-hidden h-full mt-20">
         <h1 className="absolute text-[25vw] sm:text-[25vw] md:text-[20vw] lg:text-[15vw] xl:text-[12vw] font-bold text-black/5 uppercase top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap">
           Contact
@@ -197,6 +197,7 @@ const Contact = () => {
           <h3 className="text-2xl md:text-3xl font-bold mt-5 mb-10">
             Have a question or project in mind? We&apos;re here to help.
           </h3>
+
 
           <div ref={infoRef} className="flex flex-col md:flex-row justify-between gap-10">
 
@@ -244,7 +245,7 @@ const Contact = () => {
 
             {/* Enhanced Contact Form */}
             <div className="flex-1 rounded-lg">
-              <div ref={formRef}  className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-sm">
+              <div ref={formRef} className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-sm">
 
                 {isSubmitted && (
                   <div className="mb-6 p-4  rounded-lg">
@@ -254,7 +255,7 @@ const Contact = () => {
                       </svg>
                       <p className="font-medium">Message sent successfully!</p>
                     </div>
-                    <p className=" text-sm mt-1">We'll get back to you within 24 hours.</p>
+                    <p className=" text-sm mt-1">We&apos;ll get back to you within 24 hours.</p>
                   </div>
                 )}
 
@@ -310,8 +311,8 @@ const Contact = () => {
                     onClick={handleSubmit}
                     disabled={isSubmitting}
                     className={`w-full bg-[#0A8DC1] text-white px-6 py-3 rounded-md font-medium transition duration-200 ${isSubmitting
-                        ? 'opacity-70 cursor-not-allowed'
-                        : 'hover:bg-[#0878a8] hover:shadow-lg transform hover:-translate-y-0.5'
+                      ? 'opacity-70 cursor-not-allowed'
+                      : 'hover:bg-[#0878a8] hover:shadow-lg transform hover:-translate-y-0.5'
                       }`}
                   >
                     {isSubmitting ? (
