@@ -1,45 +1,25 @@
-'use client'
-import { Montserrat } from "next/font/google"
 import Image from "next/image"
-import marble from "../../assets/marblw.jpeg"
-import { IoIosArrowRoundForward } from "react-icons/io";
-import marble2 from "../../assets/armani-2.webp"
-import marble3 from "../../assets/armani-3.webp"
-import { useEffect, useRef } from "react";
+import { IoIosArrowRoundForward } from "react-icons/io"
+import { montserrat } from "./Marble"
+import tiles from "../../assets/TileStone1.jpg"
+import tiles2 from "../../assets/armani-2.webp"
+import tiles3 from "../../assets/armani-3.webp"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
-export const montserrat = Montserrat({
-    subsets: ['latin'],
-    weight: ['400', '600', '700'],
-})
-const Marble = () => {
-    const marbleImages = [
-        { src: marble, alt: "White marble with subtle veins" },
-        { src: marble2, alt: "Classic black marble polished finish" },
-        { src: marble3, alt: "Brown marble with golden patterns" },
-        { src: marble, alt: "Green marble with natural textures" },
-        { src: marble, alt: "Cream marble smooth surface" },
-    ];
-    const headingRef = useRef(null)
+const Tiles = () => {
+const granateImages = [
+  { src: tiles, alt: "White tile with subtle gray veining, suitable for modern interiors" },
+  { src: tiles2, alt: "Polished black tile with a reflective surface for a sleek look" },
+  { src: tiles3, alt: "Brown tile featuring golden patterns for a warm, rich finish" },
+  { src: tiles, alt: "Green textured tile with natural stone-like appearance" },
+  { src: tiles, alt: "Smooth cream-colored tile with a fine grain finish" },
+];
+
+
     const paragraphRef = useRef(null)
     useEffect(() => {
-        if (headingRef.current) {
-            gsap.from(headingRef.current, {
-                scrollTrigger: {
-                    trigger: headingRef.current,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                },
-                opacity: 0,
-                scale: 0.9,
-                y: -30,
-                duration: 1.5,
-                ease: "power3.out"
-            })
-        }
-
         if (paragraphRef.current) {
             gsap.from(paragraphRef.current, {
                 scrollTrigger: {
@@ -54,9 +34,7 @@ const Marble = () => {
                 ease: "power2.out"
             });
 
-        }
-
-            gsap.utils.toArray(".marble-image").forEach((imgEl) => {
+            gsap.utils.toArray(".tiles-image").forEach((imgEl) => {
                 gsap.from(imgEl as HTMLElement, {
                     scrollTrigger: {
                         trigger: imgEl as HTMLElement,
@@ -69,36 +47,31 @@ const Marble = () => {
                     ease: "power3.out"
                 });
             });
+
+        }
+
     }, [])
-
     return (
-        <div className={`relative overflow-hidden px-0 md:px-10 py-16 ${montserrat.className}`}>
+        <div className={`relative overflow-hidden px-0 md:px-10 py-36 ${montserrat.className}`}>
             <h1 className="absolute text-[27vw] sm:text-[27vw] md:text-[22vw] lg:text-[16vw] xl:text-[12vw] font-bold text-black/5 uppercase top-3/12 left-2/6 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap hidden sm:block lg:block md:block">
-                Marble
+               Tiles
             </h1>
-            <div>
-                <h1 ref={headingRef} className="text-[#0A8DC1] text-3xl md:text-4xl font-semibold">
-                    Our Products
-                </h1>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-20">
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
                 <div ref={paragraphRef} className="flex flex-col justify-center items-center text-center">
-                    <h1 className="text-3xl font-semibold mb-4">Marbles</h1>
+                    <h1 className="text-3xl font-semibold mb-4">Tiles</h1>
                     <div className="px-8">
                         <p className="mb-2 ">
-                            Explore an exclusive collection of Indian and imported marbles crafted in
-                            stunning colours, elegant patterns, and tailored to every budget
+                          Explore a curated collection of stylish and durable tiles—offering vibrant designs, versatile finishes, and lasting performance for every space
                         </p>
                     </div>
 
                     <IoIosArrowRoundForward size={24} />
                 </div>
                 {/* first row */}
-                {marbleImages.slice(0, 2).map((img, idx) => (
+                {granateImages.slice(0, 2).map((img, idx) => (
                     <div key={`first-${idx}`} className="hidden md:block z">
-                        <div className="marble-image w-full h-80 overflow-hidden rounded-xs">
+                        <div className="tiles-image w-full h-80 overflow-hidden rounded-xs">
                             <Image
                                 src={img.src}
                                 alt={img.alt}
@@ -110,9 +83,9 @@ const Marble = () => {
                     </div>
                 ))}
                 {/* second row */}
-                {marbleImages.slice(2).map((img, idx) => (
+                {granateImages.slice(2).map((img, idx) => (
                     <div key={`second-${idx}`}>
-                        <div className="marble-image w-full h-80 overflow-hidden rounded-xs">
+                        <div className="tiles-image w-full h-80 overflow-hidden rounded-xs">
                             <Image
                                 src={img.src}
                                 alt={img.alt}
@@ -129,4 +102,4 @@ const Marble = () => {
     )
 }
 
-export default Marble
+export default Tiles

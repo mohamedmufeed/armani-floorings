@@ -8,6 +8,9 @@ import { DM_Sans } from 'next/font/google'
 import { IoIosArrowDropdown } from "react-icons/io";
 import gsap from 'gsap'
 import Marble from '@/components/Products/Marble'
+import Granite from '@/components/Products/Granite'
+import Tiles from '@/components/Products/Tiles'
+import Footer from '@/components/etc/Footer'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -85,10 +88,26 @@ const page = () => {
 
 
       </section>
-      {/* Products section */}
+      {/* Products section -Marble */}
       <section className='p-5 sm:p-10'>
         <Marble />
       </section>
+
+      {/* Products section - Granate */}
+      <section className='p-3 sm:p-2'>
+        <Granite />
+      </section>
+
+      {/* Products section - Tiles */}
+      <section className='p-5 sm:p-10'>
+        <Tiles />
+      </section>
+
+   {/* footer section */}
+      <section >
+        <Footer/>
+      </section>
+      
     </div>
   )
 }
