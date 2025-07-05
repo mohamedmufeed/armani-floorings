@@ -21,28 +21,32 @@ const montserrat = Montserrat({
 
 
 const ProductDetails = [
-    {
-        img: Marble,
-        name: "Marble",
-        subheading: "Timeless Elegance in Every Slab",
-        description: "At Armani Floorings, we offer a curated selection of premium marble perfect for timeless and elegant interiors.",
-        detail: "Marble is the epitome of luxury and refinement. Ideal for living rooms, foyers, and upscale interiors, it adds a classic aesthetic with a polished finish that lasts for generations."
-    },
-    {
-        img: Granaite,
-        name: "Granite",
-        subheading: "Strength Meets Sophistication",
-        description: "Granite options that combine strength with style for a long-lasting impact.",
-        detail: "Known for its durability and natural patterns, granite is a perfect choice for kitchens, bathrooms, and outdoor areas. Its resistance to heat and scratches makes it both practical and stylish."
-    },
-    {
-        img: Tile,
-        name: "Tiles",
-        subheading: "Versatile, Stylish, and Easy to Maintain",
-        description: "Bring warmth and elegance with our wood-inspired tile solutions.",
-        detail: "Our tile range offers a blend of textures and finishes—from wood to stone aesthetics—making it suitable for any space. It’s easy to clean, highly adaptable, and available in various colors and sizes."
-    }
-]
+  {
+    img: Marble,
+    alt: "Premium Marble Flooring by Armani Floorings",
+    name: "Marble",
+    subheading: "Timeless Elegance in Every Slab",
+    description: "At Armani Floorings, we offer a curated selection of premium marble perfect for timeless and elegant interiors.",
+    detail: "Marble is the epitome of luxury and refinement. Ideal for living rooms, foyers, and upscale interiors, it adds a classic aesthetic with a polished finish that lasts for generations."
+  },
+  {
+    img: Granaite,
+    alt: "Durable Granite Flooring for Kitchens and Bathrooms",
+    name: "Granite",
+    subheading: "Strength Meets Sophistication",
+    description: "Granite options that combine strength with style for a long-lasting impact.",
+    detail: "Known for its durability and natural patterns, granite is a perfect choice for kitchens, bathrooms, and outdoor areas. Its resistance to heat and scratches makes it both practical and stylish."
+  },
+  {
+    img: Tile,
+    alt: "Wood-inspired Stylish Tiles by Armani Floorings",
+    name: "Tiles",
+    subheading: "Versatile, Stylish, and Easy to Maintain",
+    description: "Bring warmth and elegance with our wood-inspired tile solutions.",
+    detail: "Our tile range offers a blend of textures and finishes—from wood to stone aesthetics—making it suitable for any space. It’s easy to clean, highly adaptable, and available in various colors and sizes."
+  }
+];
+
 
 
 const Products = () => {
@@ -129,7 +133,7 @@ const Products = () => {
                             <div className="h-64 sm:h-72 md:h-80 lg:h-60 xl:h-64 relative">
                                 <Image
                                     src={product.img}
-                                    alt={product.name}
+                                    alt={product.alt}
                                     fill
                                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 33vw"
                                     className="object-cover rounded-t-xl"

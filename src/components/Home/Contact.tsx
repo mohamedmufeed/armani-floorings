@@ -163,7 +163,7 @@ const Contact = () => {
 
 
   return (
-    <div className={`relative overflow-hidden px-4 md:px-10 py-16 ${montserrat.className}`}>
+    <div className={`relative overflow-hidden px-1 md:px-10 py-16 ${montserrat.className}`}>
       <div ref={headingRef}>
         <h1 className="text-[#0A8DC1] text-3xl md:text-4xl font-semibold">
           Contact Us
@@ -216,7 +216,7 @@ const Contact = () => {
                   <h4 className="text-lg font-semibold mb-1">Phone</h4>
                   <p className="text-gray-700">
                     <span className="hover: transition-colors cursor-pointer">
-                      +91 98765 43210
+                      +91 70341 36736
                     </span>
                   </p>
                 </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
                   <p className="text-gray-700">
                     <span className="hover: transition-colors cursor-pointer">
-                      contact@armanifloorings.com
+                      armanifloorings@gmail.com
                     </span>
                   </p>
                 </div>

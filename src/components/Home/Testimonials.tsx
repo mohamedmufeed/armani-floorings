@@ -144,7 +144,7 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <div className={`relative overflow-hidden px-4 md:px-10 py-28 ${montserrat.className}`}>
+        <div className={`relative overflow-hidden px-1 md:px-10 py-28 ${montserrat.className}`}>
             {/* banner */}
             <h1 className="absolute text-[25vw] sm:text-[25vw] md:text-[20vw] lg:text-[15vw] xl:text-[12vw] font-bold text-black/5 uppercase top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap">
                 Testimonials

@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import bannerImage from "../assets/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall.jpg"
 import Navbar from '@/components/etc/Navbar'
@@ -19,7 +19,6 @@ const dmSans = DM_Sans({
 })
 
 const Page = () => {
-
   const headingRef = useRef<HTMLHeadingElement>(null)
   const paragraphRef = useRef<HTMLParagraphElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -33,6 +32,7 @@ const Page = () => {
       .from(paragraphRef.current, { x: 150, opacity: 0, duration: 1 }, '-=0.7')
       .to(buttonRef.current, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
   }, [])
+
 
 
   return (
@@ -115,7 +115,7 @@ const Page = () => {
         <Contact />
       </section>
 
-
+      {/* footer section */}
       <section >
         <Footer/>
       </section>
