@@ -89,17 +89,17 @@ const page = () => {
 
       </section>
       {/* Products section -Marble */}
-      <section className='p-5 sm:p-10'>
+      <section className='p-5 sm:p-10' id='marble-section' >
         <Marble />
       </section>
 
       {/* Products section - Granate */}
-      <section className='p-3 sm:p-2'>
+      <section className='p-3 sm:p-2' id='granite-section'>
         <Granite />
       </section>
 
       {/* Products section - Tiles */}
-      <section className='p-5 sm:p-10'>
+      <section className='p-5 sm:p-10' id='tiles-section'>
         <Tiles />
       </section>
 

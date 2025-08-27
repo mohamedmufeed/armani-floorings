@@ -116,7 +116,7 @@ const Page = () => {
       </section>
 
       {/* footer section */}
-      <section >
+      <section id='footer-section' >
         <Footer/>
       </section>
 

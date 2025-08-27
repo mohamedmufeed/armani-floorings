@@ -14,7 +14,7 @@ const navItems = [
     { label: "Gallery", path: "/gallery" },
     { label: "Blog", path: "/blog" },
     { label: "Testimonials", path: "/testimonials" },
-    { label: "Contact Us", path: "/contact" }
+    { label: "Contact Us", path: "/#footer-section" }
 ]
 
 const Navbar = () => {

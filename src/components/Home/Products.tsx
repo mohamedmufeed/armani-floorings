@@ -7,44 +7,47 @@ import Marble from "../../assets/marblw.jpeg"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect, useRef } from 'react'
-import { FaArrowRightLong } from "react-icons/fa6";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 
 
+
+import { useRouter } from "next/navigation"
 gsap.registerPlugin(ScrollTrigger)
-
 
 const montserrat = Montserrat({
     subsets: ['latin'],
     weight: ['400', '600', '700'],
 })
 
-
 const ProductDetails = [
-  {
-    img: Marble,
-    alt: "Premium Marble Flooring by Armani Floorings",
-    name: "Marble",
-    subheading: "Timeless Elegance in Every Slab",
-    description: "At Armani Floorings, we offer a curated selection of premium marble perfect for timeless and elegant interiors.",
-    detail: "Marble is the epitome of luxury and refinement. Ideal for living rooms, foyers, and upscale interiors, it adds a classic aesthetic with a polished finish that lasts for generations."
-  },
-  {
-    img: Granaite,
-    alt: "Durable Granite Flooring for Kitchens and Bathrooms",
-    name: "Granite",
-    subheading: "Strength Meets Sophistication",
-    description: "Granite options that combine strength with style for a long-lasting impact.",
-    detail: "Known for its durability and natural patterns, granite is a perfect choice for kitchens, bathrooms, and outdoor areas. Its resistance to heat and scratches makes it both practical and stylish."
-  },
-  {
-    img: Tile,
-    alt: "Wood-inspired Stylish Tiles by Armani Floorings",
-    name: "Tiles",
-    subheading: "Versatile, Stylish, and Easy to Maintain",
-    description: "Bring warmth and elegance with our wood-inspired tile solutions.",
-    detail: "Our tile range offers a blend of textures and finishes—from wood to stone aesthetics—making it suitable for any space. It’s easy to clean, highly adaptable, and available in various colors and sizes."
-  }
+    {
+        img: Marble,
+        alt: "Premium Marble Flooring by Armani Floorings",
+        name: "Marble",
+        subheading: "Timeless Elegance in Every Slab",
+        description: "At Armani Floorings, we offer a curated selection of premium marble perfect for timeless and elegant interiors.",
+        detail: "Marble is the epitome of luxury and refinement. Ideal for living rooms, foyers, and upscale interiors, it adds a classic aesthetic with a polished finish that lasts for generations.",
+        sectionId: "/#marble-section"
+    },
+    {
+        img: Granaite,
+        alt: "Durable Granite Flooring for Kitchens and Bathrooms",
+        name: "Granite",
+        subheading: "Strength Meets Sophistication",
+        description: "Granite options that combine strength with style for a long-lasting impact.",
+        detail: "Known for its durability and natural patterns, granite is a perfect choice for kitchens, bathrooms, and outdoor areas. Its resistance to heat and scratches makes it both practical and stylish.",
+        sectionId: "/#granite-section"
+    },
+    {
+        img: Tile,
+        alt: "Wood-inspired Stylish Tiles by Armani Floorings",
+        name: "Tiles",
+        subheading: "Versatile, Stylish, and Easy to Maintain",
+        description: "Bring warmth and elegance with our wood-inspired tile solutions.",
+        detail: "Our tile range offers a blend of textures and finishes—from wood to stone aesthetics—making it suitable for any space. It’s easy to clean, highly adaptable, and available in various colors and sizes.",
+        sectionId: "/#tiles-section"
+    }
 ];
 
 
@@ -53,7 +56,10 @@ const Products = () => {
     const cardsRef = useRef<HTMLDivElement[]>([])
     const headingRef = useRef<HTMLDivElement>(null)
     const subHeadingRef = useRef<HTMLDivElement>(null)
-
+    const router = useRouter()
+    const handleNavigate = (path:string) => {
+        router.push(`/products${path}`)
+    }
     useEffect(() => {
 
         if (headingRef.current) {
@@ -151,9 +157,9 @@ const Products = () => {
                             <div className="absolute inset-0 bg-black/60 text-white p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col items-center justify-center text-center">
                                 <h3 className="text-xl font-semibold mb-4">{product.subheading}</h3>
                                 <p className="text-sm mb-4 max-w-xs">{product.detail}</p>
-                                <button className="text-white font-semibold px-5 py-2 mt-4 flex items-center gap-4 transition-all duration-300 rounded-full cursor-pointer">
+                                <button className="text-white font-semibold px-5 py-2 mt-4 flex items-center gap-4 transition-all duration-300 rounded-full cursor-pointer" onClick={()=>handleNavigate(product.sectionId)}>
                                     Explore {product.name}
-                                    <FaArrowRightLong className="text-white text-sm mt-[1px]" />
+                                    <CiLocationArrow1 className="text-white text-sm mt-[1px]" />
                                 </button>
                             </div>
                         </div>
