@@ -2,7 +2,9 @@ import { Montserrat } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-gsap.registerPlugin(ScrollTrigger)
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import CenterPath from "./CenterPath";
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 export const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -50,6 +52,10 @@ const Testimonials = () => {
   const headingRef = useRef(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const pathRef = useRef<SVGPathElement | null>(null)
+  const ballRef = useRef(null)
+
+ 
+
   useEffect(() => {
     if (headingRef.current) {
       gsap.from(headingRef.current, {
@@ -81,41 +87,15 @@ const Testimonials = () => {
         })
       })
     }
-    if (pathRef.current) {
-      const length = pathRef.current.getTotalLength()
-      gsap.set(pathRef.current, {
-        strokeDasharray: length,
-        strokeDashoffset: length,
-      })
-
-      gsap.to(pathRef.current, {
-        strokeDashoffset: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".testimonials-section",
-          start: "top center",
-          end: "bottom bottom",
-          scrub: true
-        }
-      })
-    }
+  
   }, [])
 
   return (
     <div className={`relative overflow-hidden px-1 md:px-10 py-28 ${montserrat.className} testimonials-section`}>
 
-      <svg
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          ref={pathRef}
-          d="M 300 200 C 500 300, 200 600, 600 600 S 300 1200, 600 1600"
-          stroke="#0A8DC1"
-          strokeWidth="4"
-          fill="none"
-        />
-      </svg>
+      
+
+  <CenterPath triggerClass="testimonials-section"  />
 
       <div className="relative z-10 mb-10">
         <h1 className="absolute text-[27vw] sm:text-[27vw] md:text-[22vw] lg:text-[16vw] xl:text-[12vw] font-bold text-black/5 uppercase top-2/2 left-6/12 -translate-x-1/2 -translate-y-1/12 z-0 pointer-events-none whitespace-nowrap">
@@ -140,7 +120,7 @@ const Testimonials = () => {
                 cardsRef.current[index] = el;
               }}
             >
-              <div className="w-full md:w-2/3 lg:w-1/2 rounded-2xl shadow-md overflow-hidden">
+              <div className="w-full md:w-1/2 lg:w-2/5 rounded-2xl shadow-md overflow-hidden">
                 <div className="bg-[#73cbee] rounded-t-2xl p-6 flex justify-between items-center shadow-md">
                   <div>
                     <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
