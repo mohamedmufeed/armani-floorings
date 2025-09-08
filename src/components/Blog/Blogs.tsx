@@ -71,6 +71,7 @@ const Blogs = () => {
         y: -30,
         duration: 1,
         ease: "power3.out",
+        
       })
     }
 

@@ -7,6 +7,8 @@ import React, { useEffect, useRef } from 'react'
 import { DM_Sans } from 'next/font/google'
 import { IoIosArrowDropdown } from "react-icons/io";
 import gsap from 'gsap'
+import Footer from '@/components/etc/Footer'
+import Journey from '@/components/About/Journey'
 
 
 const dmSans = DM_Sans({
@@ -82,6 +84,14 @@ const page = () => {
 
                     </button>
                 </div>
+            </section>
+            {/* Journey  Section */}
+            <section className='p-5 sm:p-10'>
+                <Journey />
+            </section>
+            {/* footer section */}
+            <section >
+                <Footer />
             </section>
         </div>
     )
