@@ -1,5 +1,5 @@
 import { Montserrat } from "next/font/google"
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -12,17 +12,85 @@ gsap.registerPlugin(ScrollTrigger)
 
 const blogs = [
   {
-    title: "What is the difference between tile and marble",
-    date: "Apr 30, 2025",
-    text: "When it comes to flooring, marble and tiles are two of the most popular choices homeowners and designers consider. But how do you choose the right one for your space? Understanding their differences in appearance, durability, cost, and maintenance can help you make a smarter investment for your home or business     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur expedita veniam laudantium? Tempora placeat cupiditate saepe commodi dolorum eum ratione similique consectetur? Porro laudantium officiis ex facilis ad temporibus unde!"
+    title: "What is the Difference Between Tiles and Marble for Your Home in Kottakkal?",
+    date: "Sep 8, 2025",
+    text: `When it comes to flooring, marble and tiles are two popular options. If you’re in Kottakkal and confused about which one to choose, here’s a simple guide:
+
+Appearance: Marble gives a luxurious, natural look with unique veins, while tiles come in various designs and colors.
+
+Durability: Marble is durable but can scratch; tiles are more resistant to wear and tear.
+
+Maintenance: Tiles are easier to clean; marble needs polishing.
+
+Cost: Tiles are generally cheaper, marble is a premium option.
+
+User Doubts Answered:
+- "Can I use marble in my kitchen?" → Yes, but consider regular maintenance.
+- "Are tiles slippery?" → Some tiles have anti-slip textures; ask our experts.
+
+Visit Armani Floorings in Kottakkal for premium marble and tile options.`
   },
   {
-    title: "Is wooden flooring a good choice for Indian homes?",
-    date: "May 10, 2025",
-    text: "Wooden flooring brings warmth and elegance, but is it practical for Indian weather conditions and lifestyle? Learn about pros, cons, maintenance, and alternatives before making a decision. " 
+    title: "Is Wooden Flooring a Good Choice for Indian Homes?",
+    date: "Sep 8, 2025",
+    text: `Wooden flooring brings warmth and elegance. But is it ideal for Indian weather?
+
+Pros: Elegant, comfortable, adds value to your home.
+Cons: Sensitive to moisture, can scratch easily, needs regular maintenance.
+Alternatives: Laminated wood or vinyl flooring that mimics wood but is more durable in humid climates.
+
+User Questions Answered:
+- "Will wood flooring last in Kerala’s humidity?" → Only if treated properly; otherwise, tiles or marble are better.
+- "Can I clean it with water?" → Minimal water; use specialized cleaners.`
   },
-  
-]
+  {
+    title: "How to Choose the Best Marble Tiles in Kottakkal for Your Home",
+    date: "Sep 8, 2025",
+    text: `Marble tiles can transform your home, but choosing the right type is key.
+
+1. Type of Marble: White, black, beige, or green marble – choose according to room size and décor.
+2. Finish: Polished, honed, or tumbled – affects appearance and slip resistance.
+3. Thickness & Size: Thicker tiles are durable; larger tiles create a modern look.
+
+User FAQs:
+- "Which marble is best for living rooms?" → Light-colored polished marble creates elegance.
+- "Can I use marble in bathrooms?" → Yes, prefer honed for slip resistance.
+
+Visit Armani Floorings in Kottakkal to see our premium marble tile collection.`
+  },
+  {
+    title: "Top 5 Tips for Maintaining Granite Floors in Kottakkal Homes",
+    date: "Sep 8, 2025",
+    text: `Granite flooring is durable, but proper care ensures long-lasting beauty:
+
+1. Clean spills immediately to avoid stains.
+2. Use mild detergent and avoid acidic cleaners.
+3. Polish granite every 6–12 months.
+4. Avoid dragging heavy furniture.
+5. Seal granite surfaces for extra protection.
+
+User FAQs:
+- "How often should I polish granite floors?" → Every 6–12 months depending on foot traffic.
+- "Can granite floors be used in kitchens?" → Yes, granite is perfect for high-traffic and kitchen areas.
+
+Visit Armani Floorings in Kottakkal for premium granite options.`
+  },
+  {
+    title: "Affordable vs Premium Tiles in Kottakkal – Which Should You Choose?",
+    date: "Sep 8, 2025",
+    text: `Choosing between affordable and premium tiles can be tricky. Here’s a simple guide:
+
+- Affordable Tiles: Budget-friendly, available in many designs, durable for moderate use.
+- Premium Tiles: Higher quality, polished finish, more elegant, longer-lasting.
+
+User Doubts Answered:
+- "Are premium tiles worth the extra cost?" → Yes, especially for living rooms and offices where aesthetics matter.
+- "Can I mix affordable and premium tiles?" → Yes, use premium in main areas and affordable in secondary spaces.
+
+Armani Floorings in Kottakkal offers both options with expert guidance.`
+  }
+];
+
 const Blogs = () => {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const contentRefs = useRef<HTMLDivElement[]>([])
@@ -50,7 +118,7 @@ const Blogs = () => {
           duration: 0.8,
           ease: "power2.inOut",
           onComplete: () => {
-            content.style.height = "auto" 
+            content.style.height = "auto"
           },
         }
       )
@@ -71,7 +139,7 @@ const Blogs = () => {
         y: -30,
         duration: 1,
         ease: "power3.out",
-        
+
       })
     }
 
@@ -126,8 +194,14 @@ const Blogs = () => {
                   style={{ height: "80px" }}
                 >
                   <p className="text-gray-700 text-base leading-relaxed">
-                    {blog.text}
+                    {blog.text.split("\n").map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </p>
+
                 </div>
               </div>
 

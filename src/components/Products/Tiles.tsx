@@ -9,13 +9,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 const Tiles = () => {
-const granateImages = [
-  { src: tiles, alt: "White tile with subtle gray veining, suitable for modern interiors" },
-  { src: tiles2, alt: "Polished black tile with a reflective surface for a sleek look" },
-  { src: tiles3, alt: "Brown tile featuring golden patterns for a warm, rich finish" },
-  { src: tiles, alt: "Green textured tile with natural stone-like appearance" },
-  { src: tiles, alt: "Smooth cream-colored tile with a fine grain finish" },
+const tileImages = [
+  { src: tiles, alt: "Best premium white tile flooring in Kottakkal with subtle gray veins for modern interiors" },
+  { src: tiles2, alt: "Best polished black tile flooring in Malappuram with reflective surface for a sleek look" },
+  { src: tiles3, alt: "Best brown tile flooring in Kottakkal with golden patterns for a warm, rich finish" },
+  { src: tiles, alt: "Best green textured tile flooring in Malappuram with natural stone-like appearance" },
+  { src: tiles, alt: "Best cream-colored tile flooring in Kottakkal with smooth fine grain finish" },
 ];
+
 
 
     const paragraphRef = useRef(null)
@@ -69,7 +70,7 @@ const granateImages = [
                     <IoIosArrowRoundForward size={24} />
                 </div>
                 {/* first row */}
-                {granateImages.slice(0, 2).map((img, idx) => (
+                {tileImages.slice(0, 2).map((img, idx) => (
                     <div key={`first-${idx}`} className="hidden md:block z">
                         <div className="tiles-image w-full h-80 overflow-hidden rounded-xs">
                             <Image
@@ -83,7 +84,7 @@ const granateImages = [
                     </div>
                 ))}
                 {/* second row */}
-                {granateImages.slice(2).map((img, idx) => (
+                {tileImages.slice(2).map((img, idx) => (
                     <div key={`second-${idx}`}>
                         <div className="tiles-image w-full h-80 overflow-hidden rounded-xs">
                             <Image

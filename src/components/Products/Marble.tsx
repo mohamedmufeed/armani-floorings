@@ -15,13 +15,14 @@ export const montserrat = Montserrat({
     weight: ['400', '600', '700'],
 })
 const Marble = () => {
-    const marbleImages = [
-        { src: marble, alt: "White marble with subtle veins" },
-        { src: marble2, alt: "Classic black marble polished finish" },
-        { src: marble3, alt: "Brown marble with golden patterns" },
-        { src: marble, alt: "Green marble with natural textures" },
-        { src: marble, alt: "Cream marble smooth surface" },
-    ];
+   const marbleImages = [
+  { src: marble, alt: "Best premium white marble flooring in Kottakkal with subtle veins" },
+  { src: marble2, alt: "Best classic black marble flooring in Malappuram with polished finish" },
+  { src: marble3, alt: "Best brown marble flooring in Kottakkal with golden patterns for a luxurious look" },
+  { src: marble, alt: "Best green marble flooring in Malappuram with natural textures" },
+  { src: marble, alt: "Best cream-colored marble flooring in Kottakkal with smooth surface" },
+];
+
     const headingRef = useRef(null)
     const paragraphRef = useRef(null)
     useEffect(() => {

@@ -14,39 +14,40 @@ const testimonials = [
   {
     name: "Mohamed Mufeed",
     date: "19 May 2025",
-    title: "Choosing the Right Flooring for Every Room",
+    title: "Best Flooring Solutions in Kottakkal",
     content:
-      "Flooring truly transformed my space! Armani Floorings helped us choose the perfect materials to match our style and needs. The quality and finish exceeded expectations!",
+      "Armani Floorings in Kottakkal transformed my home with premium marble and tile flooring. The team helped me choose the perfect material for every room. Highly recommended for quality and style!",
   },
   {
     name: "Aisha Rahman",
     date: "02 June 2025",
-    title: "Exceptional Service and Durability",
+    title: "Premium & Durable Flooring in Malappuram",
     content:
-      "Armani Floorings exceeded my expectations. The team was friendly and professional, and the materials used were top-notch. I’m impressed with how durable and beautiful  look!",
+      "I had a great experience with Armani Floorings in Malappuram. Their premium flooring options are both stylish and long-lasting. The team is professional and friendly!",
   },
   {
     name: "Faheem Ali",
     date: "10 June 2025",
-    title: "Perfect for Modern Interiors",
+    title: "Modern & Elegant Floors in Kottakkal",
     content:
-      "I was looking for modern, minimalist flooring for my startup office. Armani Floorings delivered just that. Clean lines, smooth finish, and hassle-free installation!",
+      "I wanted modern flooring for my office, and Armani Floorings delivered. The floors are smooth, elegant, and hassle-free. Truly the best flooring service in Kottakkal!",
   },
   {
     name: "Sarah John",
     date: "15 June 2025",
-    title: "Stylish & Affordable",
+    title: "Affordable Premium Flooring in Malappuram",
     content:
-      "I wanted a stylish yet budget-friendly flooring option. Armani Floorings delivered exactly that – high-quality floors at a great price!",
+      "Looking for budget-friendly yet premium floors? Armani Floorings in Malappuram offers stylish and high-quality flooring options at great prices. Highly recommended!",
   },
   {
     name: "Imran Khan",
     date: "20 June 2025",
-    title: "Luxury with Comfort",
+    title: "Luxury Flooring in Kottakkal",
     content:
-      "Their flooring gave my villa a premium look while still being comfortable for daily living. Highly recommend Armani Floorings!",
+      "Our villa looks amazing thanks to Armani Floorings in Kottakkal. Their luxury flooring combines style and comfort perfectly. Best choice for premium homes!",
   },
 ];
+
 
 const Testimonials = () => {
   const headingRef = useRef(null)

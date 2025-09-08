@@ -9,13 +9,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 const Granite = () => {
-const granateImages = [
-  { src: granite, alt: "White granite flooring with subtle gray veins" },
-  { src: granite2, alt: "Polished black granite flooring with reflective surface" },
-  { src: granite3, alt: "Brown granite flooring featuring golden mineral streaks" },
-  { src: granite, alt: "Green granite flooring with natural earthy textures" },
-  { src: granite, alt: "Smooth cream-colored granite flooring with fine grains" },
+const graniteImages = [
+  { src: granite, alt: "Best premium white granite flooring in Kottakkal with subtle gray veins" },
+  { src: granite2, alt: "Best polished black granite flooring in Malappuram with shiny surface" },
+  { src: granite3, alt: "Best brown granite flooring in Kottakkal with golden streaks for a luxurious look" },
+  { src: granite, alt: "Best green granite flooring in Malappuram with natural earthy patterns" },
+  { src: granite, alt: "Best cream-colored granite flooring in Kottakkal with smooth fine grains" },
 ];
+
 
     const paragraphRef = useRef(null)
     useEffect(() => {
@@ -68,7 +69,7 @@ const granateImages = [
                     <IoIosArrowRoundForward size={24} />
                 </div>
                 {/* first row */}
-                {granateImages.slice(0, 2).map((img, idx) => (
+                {graniteImages.slice(0, 2).map((img, idx) => (
                     <div key={`first-${idx}`} className="hidden md:block z">
                         <div className="granite-image w-full h-80 overflow-hidden rounded-xs">
                             <Image
@@ -82,7 +83,7 @@ const granateImages = [
                     </div>
                 ))}
                 {/* second row */}
-                {granateImages.slice(2).map((img, idx) => (
+                {graniteImages.slice(2).map((img, idx) => (
                     <div key={`second-${idx}`}>
                         <div className="granite-image w-full h-80 overflow-hidden rounded-xs">
                             <Image
