@@ -1,5 +1,5 @@
 import { Montserrat } from "next/font/google";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -51,10 +51,6 @@ const testimonials = [
 const Testimonials = () => {
   const headingRef = useRef(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const pathRef = useRef<SVGPathElement | null>(null)
-  const ballRef = useRef(null)
-
- 
 
   useEffect(() => {
     if (headingRef.current) {

@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
     weight: ['700'],
 })
 
-const page = () => {
+const Page = () => {
     const buttonRef = useRef(null)
     const headingRef = useRef(null)
     const sentenceRef = useRef(null)
@@ -70,7 +70,7 @@ const page = () => {
                         ref={sentenceRef}
                         className="max-w-2xl text-md md:text-lg mb-6"
                     >
-                        From humble beginnings to proud milestones — here's our story in pictures
+                        From humble beginnings to proud milestones — here&apos;s our story in pictures
                     </p>
 
                     <button
@@ -97,4 +97,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

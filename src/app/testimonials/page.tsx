@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
   weight: ['700'],
 })
 
-const page = () => {
+const Page = () => {
   const buttonRef = useRef(null)
   const headingRef = useRef(null)
   const sentenceRef = useRef(null)
@@ -98,4 +98,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
