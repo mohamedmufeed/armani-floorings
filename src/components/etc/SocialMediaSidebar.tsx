@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
+import { Instagram, Facebook, Youtube  } from 'lucide-react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const SocialMediaSidebar = () => {
     const [hide, setHide] = useState(false)
     const footerRef = useRef<HTMLElement | null>(null)
@@ -43,7 +44,7 @@ const SocialMediaSidebar = () => {
                 className="p-3 rounded-full hover:scale-110 text-white transition-transform"
                 aria-label="Instagram"
             >
-                <FaInstagram size={20} />
+                <Instagram size={20} />
             </a>
 
             <a
@@ -53,7 +54,7 @@ const SocialMediaSidebar = () => {
                 className="p-3 rounded-full hover:scale-110 text-white transition-transform"
                 aria-label="Facebook"
             >
-                <FaFacebookF size={20} />
+                <Facebook size={20} />
             </a>
 
             <a
@@ -63,7 +64,7 @@ const SocialMediaSidebar = () => {
                 className="p-3 rounded-full hover:scale-110 text-white transition-transform"
                 aria-label="WhatsApp"
             >
-                <FaWhatsapp size={20} />
+                <WhatsAppIcon  />
             </a>
 
             <a
@@ -73,7 +74,7 @@ const SocialMediaSidebar = () => {
                 className="p-3 rounded-full hover:scale-110 text-white transition-transform"
                 aria-label="YouTube"
             >
-                <FaYoutube size={20} />
+                <Youtube size={20} />
             </a>
         </div>
     )

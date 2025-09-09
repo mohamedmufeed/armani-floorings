@@ -1,8 +1,9 @@
 import React from 'react';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Logo from '../../assets/Armani Logo For Dev.png';
-import { FaWhatsapp } from 'react-icons/fa';
+import { Instagram, Facebook, Youtube  } from 'lucide-react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+// import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -71,7 +72,8 @@ const Footer = () => {
                   aria-label="WhatsApp"
                   className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-[#0A8DC1]  transition-all"
                 >
-                  <FaWhatsapp size={18} />
+                  
+                  <WhatsAppIcon />
                 </a>
                 <a
                   href="https://www.youtube.com/@armanifloorings"

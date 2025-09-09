@@ -3,7 +3,8 @@ import { Montserrat } from "next/font/google"
 import Image from "next/image"
 import Armani1 from "../../assets/armani-3.webp"
 import Armani2 from "../../assets/armani-2.webp"
-import { FaArrowRightLong } from "react-icons/fa6";
+
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -123,7 +124,7 @@ const Journey = () => {
                             </div>
 
                             <div className="w-full sm:w-1/2 bg-gray-200 flex items-center justify-center text-white rounded-md min-h-[120px] h-[225px]">
-                                <FaArrowRightLong className="w-10 h-12 text-gray-500" />
+                                <ArrowForwardIcon sx={{fontSize:40}} className="w-10 h-12 text-gray-500" />
                             </div>
                         </div>
                     </div>

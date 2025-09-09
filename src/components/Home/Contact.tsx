@@ -2,8 +2,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Montserrat } from "next/font/google"
-import { FaLocationDot, FaRegClock } from "react-icons/fa6"
-import { FaPhoneAlt } from "react-icons/fa"
+import { LuClock } from "react-icons/lu";
+import { MdLocationOn } from "react-icons/md";
+
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { MdEmail } from "react-icons/md"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -203,7 +205,7 @@ const Contact = () => {
 
             <div className="flex-1 space-y-6 p-6">
               <div className="flex items-start gap-4 p-4  rounded-lg transition-colors duration-200">
-                <FaLocationDot className=" text-xl mt-1" />
+                <MdLocationOn className=" text-xl mt-1" />
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Address</h4>
                   <p className="text-gray-700">Arichol, Kottakkal, Malappuram Dist, Kerala, India, PIN 676503</p>
@@ -211,7 +213,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4 p-4  rounded-lg transition-colors duration-200">
-                <FaPhoneAlt className=" text-xl mt-1" />
+                <LocalPhoneIcon className=" text-xl mt-1" />
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Phone</h4>
                   <p className="text-gray-700">
@@ -235,7 +237,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4 p-4  rounded-lg transition-colors duration-200">
-                <FaRegClock className=" text-xl mt-1" />
+                <LuClock className=" text-xl mt-1" />
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Opening Hours</h4>
                   <p className="text-gray-700">Mon – Sat: 9:00 AM – 7:00 PM</p>

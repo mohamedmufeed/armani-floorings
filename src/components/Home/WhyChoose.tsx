@@ -1,7 +1,9 @@
 'use client'
 import { Montserrat } from "next/font/google"
-import { FaCalendarAlt } from "react-icons/fa";
-import { BsBoxSeam } from "react-icons/bs";
+import EventIcon from '@mui/icons-material/Event';
+
+import { CiInboxIn } from "react-icons/ci";
+
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";
@@ -25,7 +27,7 @@ const whyChooseUsData = [
         id: 2,
         title: "Free Consultation",
         description: "We assure you that it is our desire",
-        icon: <BsBoxSeam size={40} />,
+        icon: <CiInboxIn size={40} />,
     },
     {
         id: 3,
@@ -37,7 +39,7 @@ const whyChooseUsData = [
         id: 4,
         title: "Wide variety of collections",
         description: "Explore your true style.",
-        icon: <FaCalendarAlt size={40} />,
+        icon: <EventIcon sx={{fontSize:40}} />,
     },
     {
         id: 5,

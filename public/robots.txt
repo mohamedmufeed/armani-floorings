@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.armanifloorings.com
+
+# Sitemaps
+Sitemap: https://www.armanifloorings.com/sitemap.xml
