@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Armani Floorings - Best Marble & Granite Tiles in Kottakkal",
+  title: "Armani Floorings - Best Marble Shop in Kottakkal",
   description:
-    "Armani Floorings in Kottakkal offers premium marble and granite tiles for homes and offices. Elegant flooring solutions with durability and style.",
+    "Armani Floorings in Kottakkal offers premium marble premium granite premium tiles for homes and offices. Best flooring solutions with durability and style.",
   keywords:
-    "marble tiles Kottakkal, granite tiles Kottakkal, Armani Floorings, floor shop Kottakkal, luxury flooring Kottakkal",
+    " Best marble tiles Kottakkal, granite tiles Kottakkal, Armani Floorings, Best floor shop Kottakkal, premium floorings Kottakkal",
   openGraph: {
-    title: "Armani Floorings - Best Marble & Granite Tiles in Kottakkal",
+    title: "Armani Floorings - Best Marble Shop in Kottakkal",
     description:
       "Elegant flooring solutions with premium marble and granite tiles in Kottakkal. Visit Armani Floorings for your dream floors.",
     url: "https://www.armanifloorings.com",

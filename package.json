@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-  "postbuild": "next-sitemap --config next-sitemap.config.ts",
+    "postbuild": "next-sitemap --config next-sitemap.config.ts",
     "lint": "next lint"
   },
   "dependencies": {
@@ -23,7 +23,8 @@
     "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "shadcn-ui": "^0.9.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
