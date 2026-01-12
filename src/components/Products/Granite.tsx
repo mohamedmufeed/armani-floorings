@@ -2,7 +2,6 @@ import Image from "next/image"
 import { IoIosArrowRoundForward } from "react-icons/io"
 import { montserrat } from "./Marble"
 import granite from "../../assets/grante.webp"
-import granite2 from "../../assets/armani-2.webp"
 import granite3 from "../../assets/armani-3.webp"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
