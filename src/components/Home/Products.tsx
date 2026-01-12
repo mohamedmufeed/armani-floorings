@@ -28,7 +28,8 @@ const ProductDetails = [
         subheading: "Timeless Elegance in Every Slab",
         description: "At Armani Floorings, we offer a curated selection of premium marble perfect for timeless and elegant interiors.",
         detail: "Marble is the epitome of luxury and refinement. Ideal for living rooms, foyers, and upscale interiors, it adds a classic aesthetic with a polished finish that lasts for generations.",
-        sectionId: "/#marble-section"
+        sectionId: "/#marble",
+
     },
     {
         img: Granaite,
@@ -37,7 +38,7 @@ const ProductDetails = [
         subheading: "Strength Meets Sophistication",
         description: "Granite options that combine strength with style for a long-lasting impact.",
         detail: "Known for its durability and natural patterns, granite is a perfect choice for kitchens, bathrooms, and outdoor areas. Its resistance to heat and scratches makes it both practical and stylish.",
-        sectionId: "/#granite-section"
+        sectionId: "/#granite",
     },
     {
         img: Tile,
@@ -46,7 +47,7 @@ const ProductDetails = [
         subheading: "Versatile, Stylish, and Easy to Maintain",
         description: "Bring warmth and elegance with our wood-inspired tile solutions.",
         detail: "Our tile range offers a blend of textures and finishes—from wood to stone aesthetics—making it suitable for any space. It’s easy to clean, highly adaptable, and available in various colors and sizes.",
-        sectionId: "/#tiles-section"
+        sectionId: "/#tiles",
     }
 ];
 

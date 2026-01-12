@@ -53,7 +53,7 @@ const tileImages = [
 
     }, [])
     return (
-        <div className={`relative overflow-hidden px-0 md:px-10 py-36 ${montserrat.className}`}>
+        <div id="tiles" className={`relative overflow-hidden px-0 md:px-10 py-36 ${montserrat.className}`}>
             <h1 className="absolute text-[27vw] sm:text-[27vw] md:text-[22vw] lg:text-[16vw] xl:text-[12vw] font-bold text-black/5 uppercase top-3/12 left-2/6 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap hidden sm:block lg:block md:block">
                Tiles
             </h1>

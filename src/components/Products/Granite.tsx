@@ -10,8 +10,8 @@ import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 const Granite = () => {
 const graniteImages = [
-  { src: granite, alt: "Best premium white granite flooring in Kottakkal with subtle gray veins" },
-  { src: granite2, alt: "Best polished black granite flooring in Malappuram with shiny surface" },
+  { src: "/images/IMG_2736.jpg", alt: "Best premium white granite flooring in Kottakkal with subtle gray veins" },
+  { src: "/images/IMG_14502.jpg", alt: "Best polished black granite flooring in Malappuram with shiny surface" },
   { src: granite3, alt: "Best brown granite flooring in Kottakkal with golden streaks for a luxurious look" },
   { src: granite, alt: "Best green granite flooring in Malappuram with natural earthy patterns" },
   { src: granite, alt: "Best cream-colored granite flooring in Kottakkal with smooth fine grains" },
@@ -52,7 +52,7 @@ const graniteImages = [
 
     }, [])
     return (
-        <div className={`relative overflow-hidden px-0 md:px-10  ${montserrat.className}`}>
+        <div id="granite" className={`relative overflow-hidden px-0 md:px-10  ${montserrat.className}`}>
             <h1 className="absolute text-[27vw] sm:text-[27vw] md:text-[22vw] lg:text-[16vw] xl:text-[12vw] font-bold text-black/5 uppercase top-3/12 left-2/6 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap hidden sm:block lg:block md:block">
                 Granite
             </h1>

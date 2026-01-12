@@ -1,10 +1,7 @@
 'use client'
 import { Montserrat } from "next/font/google"
 import Image from "next/image"
-import marble from "../../assets/marblw.jpeg"
 import { IoIosArrowRoundForward } from "react-icons/io";
-import marble2 from "../../assets/armani-2.webp"
-import marble3 from "../../assets/armani-3.webp"
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,11 +13,11 @@ export const montserrat = Montserrat({
 })
 const Marble = () => {
    const marbleImages = [
-  { src: marble, alt: "Best premium white marble flooring in Kottakkal with subtle veins" },
-  { src: marble2, alt: "Best classic black marble flooring in Malappuram with polished finish" },
-  { src: marble3, alt: "Best brown marble flooring in Kottakkal with golden patterns for a luxurious look" },
-  { src: marble, alt: "Best green marble flooring in Malappuram with natural textures" },
-  { src: marble, alt: "Best cream-colored marble flooring in Kottakkal with smooth surface" },
+  { src: "/images/IMG_2728.jpg", alt: "Best premium white marble flooring in Kottakkal with subtle veins" },
+  { src: "/images/img_2738.jpg", alt: "Best classic black marble flooring in Malappuram with polished finish" },
+  { src: "/images/IMG_2729.jpg", alt: "Best brown marble flooring in Kottakkal with golden patterns for a luxurious look" },
+  { src: "/images/IMG_2737.jpg", alt: "Best green marble flooring in Malappuram with natural textures" },
+  { src: "/images/IMG_2736.jpg", alt: "Best cream-colored marble flooring in Kottakkal with smooth surface" },
 ];
 
     const headingRef = useRef(null)
@@ -73,7 +70,7 @@ const Marble = () => {
     }, [])
 
     return (
-        <div className={`relative overflow-hidden px-0 md:px-10 py-16 ${montserrat.className}`}>
+        <div id="marble" className={`relative overflow-hidden px-0 md:px-10 py-16 ${montserrat.className}`}>
             <h1 className="absolute text-[27vw] sm:text-[27vw] md:text-[22vw] lg:text-[16vw] xl:text-[12vw] font-bold text-black/5 uppercase top-3/12 left-2/6 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none whitespace-nowrap hidden sm:block lg:block md:block">
                 Marble
             </h1>
