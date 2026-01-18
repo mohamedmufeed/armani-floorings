@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 const whyChooseUsData = [
     {
         id: 1,
-        title: "45 years of excellence",
+        title: "4 years of excellence",
         description: "Perfection is not attainable, but if we chase perfection, we can catch excellence.",
         icon: <LuCalendarCheck2 size={40}  />, 
     },
