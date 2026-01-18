@@ -48,7 +48,7 @@ const Page = () => {
             src={bannerImage}
             alt="Banner"
             fill
-            className="object-cover w-full h-full brightness-65"
+            className="object-cover w-full h-full brightness-40"
             priority
           />
         </div>

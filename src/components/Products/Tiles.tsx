@@ -1,20 +1,17 @@
 import Image from "next/image"
 import { IoIosArrowRoundForward } from "react-icons/io"
 import { montserrat } from "./Marble"
-import tiles from "../../assets/TileStone1.jpg"
-import tiles2 from "../../assets/armani-2.webp"
-import tiles3 from "../../assets/armani-3.webp"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 const Tiles = () => {
 const tileImages = [
-  { src: tiles, alt: "Best premium white tile flooring in Kottakkal with subtle gray veins for modern interiors" },
-  { src: tiles2, alt: "Best polished black tile flooring in Malappuram with reflective surface for a sleek look" },
-  { src: tiles3, alt: "Best brown tile flooring in Kottakkal with golden patterns for a warm, rich finish" },
-  { src: tiles, alt: "Best green textured tile flooring in Malappuram with natural stone-like appearance" },
-  { src: tiles, alt: "Best cream-colored tile flooring in Kottakkal with smooth fine grain finish" },
+  { src: "/images/tile-image-1.jpg", alt: "Best premium white tile flooring in Kottakkal with subtle gray veins for modern interiors" },
+  { src: "/images/tile-image-2.jpg", alt: "Best polished black tile flooring in Malappuram with reflective surface for a sleek look" },
+//   { src: "/images/tile-image-1.jpg", alt: "Best brown tile flooring in Kottakkal with golden patterns for a warm, rich finish" },
+//   { src: tiles, alt: "Best green textured tile flooring in Malappuram with natural stone-like appearance" },
+//   { src: tiles, alt: "Best cream-colored tile flooring in Kottakkal with smooth fine grain finish" },
 ];
 
 

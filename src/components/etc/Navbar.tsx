@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../../assets/Armani Logo For Dev.png"
-import { Questrial } from 'next/font/google'
 import { Menu, X } from 'lucide-react'
 
-const questrial = Questrial({ subsets: ['latin'], weight: '400' })
 
 const navItems = [
     { label: "Home", path: "/" },
@@ -21,7 +19,7 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     return (
-        <nav className='w-full'>
+        <nav className='w-full '>
             <div className='mx-auto flex justify-between items-center p-4'>
                 {/* Logo */}
                 <div className='flex items-center'>
@@ -40,8 +38,8 @@ const Navbar = () => {
                             key={index}
                             href={item.path}
                             className={`
-                                ${questrial.className}
-                                text-md font-bold text-black
+            
+                                text-md font-medium text-white
                                 transform transition-all duration-200
                                 hover:scale-105 hover:text-[#0A8DC1] hover:font-semibold
                                 cursor-pointer
@@ -53,7 +51,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Icon */}
-                <div className='md:hidden'>
+                <div className='md:hidden text-white'>
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -62,19 +60,20 @@ const Navbar = () => {
 
             {/* Mobile Dropdown */}
             {isMobileMenuOpen && (
-                <div className='md:hidden px-4 pb-4'>
-                    <div className='flex flex-col space-y-3 bg-white'>
+                
+                <div className='md:hidden   w-full px-4  '>
+                    <div className='flex flex-col space-y-3 bg-white/10 backdrop-blur-sm px-4 py-10 rounded-2xl text-center'>
                         {navItems.map((item, index) => (
                             <Link
                                 key={index}
                                 href={item.path}
                                 className={`
-                                    ${questrial.className}
-                                    text-base text-gray-700
+                                    text-lg text-white
                                     hover:scale-105
+                                    font-medium
                                     hover:font-semibold
                                     hover:text-[#0A8DC1]
-                                    transition-all duration-200 cursor-pointer
+                                    transition-all duration-200 cursor-pointer 
                                 `}
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >

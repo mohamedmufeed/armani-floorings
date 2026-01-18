@@ -13,7 +13,7 @@ const graniteImages = [
   { src: "/images/IMG_14502.jpg", alt: "Best polished black granite flooring in Malappuram with shiny surface" },
   { src: granite3, alt: "Best brown granite flooring in Kottakkal with golden streaks for a luxurious look" },
   { src: granite, alt: "Best green granite flooring in Malappuram with natural earthy patterns" },
-  { src: granite, alt: "Best cream-colored granite flooring in Kottakkal with smooth fine grains" },
+//   { src: granite, alt: "Best cream-colored granite flooring in Kottakkal with smooth fine grains" },
 ];
 
 
